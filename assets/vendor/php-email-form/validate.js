@@ -77,12 +77,12 @@ function showModal(projectKey) {
       document.getElementById('modal-title').innerText = projects[projectKey].title;
       document.getElementById('modal-description').innerHTML = projects[projectKey].description; // Fix applied
       document.getElementById('modal').style.display = "flex";
-      document.body.classList.add('no-scroll');
+      document.body.style.overflow = "hidden"; // Prevent background scroll
     }
 
     function closeModal() {
       document.getElementById('modal').style.display = "none";
-      document.body.classList.add('no-scroll');
+      document.body.style.overflow = "auto"; // Restore background scroll
     }
 
 document.addEventListener("DOMContentLoaded", function() {
